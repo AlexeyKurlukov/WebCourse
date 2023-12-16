@@ -1,0 +1,49 @@
+.add-todo-page .add-todo-form > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.add-todo-page .error-message {
+    color: #f00;
+    display: none;
+}
+
+.add-todo-page .new-error-message {
+    color: #f00;
+}
+
+.add-todo-page .invalid {
+    border-color: #f00;
+}
+
+.add-todo-page .invalid + .error-message {
+    display: block;
+}
+
+.add-todo-page .todo-list {
+    padding-left: 0;
+}
+
+.add-todo-page .add-button {
+    margin-left: 5px;
+}
+
+.add-todo-page .delete-button {
+    margin-left: 5px;
+}
+
+.add-todo-page .edit-button {
+    margin-left: 5px;
+}
+
+.add-todo-page .cancel-button {
+    margin-left: 5px;
+}
+
+.add-todo-page .save-button {
+    margin-left: 5px;
+}
+
+.add-todo-page .todo-item + .todo-item {
+    margin-top: 10px;
+}
