@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер температур</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="temperature-converter">
+    <h1>Конвертер температур</h1>
+
+    <form class="temperature-form" id="temperature-form">
+        <div>
+            <input class="temperature-input" id="celsiusInput" type="number"
+                   placeholder="Введите температуру в Цельсиях">
+            <div style="display:none;" class="error-message">Необходимо ввести температуру</div>
+        </div>
+
+        <button class="convert-button" id="convert-button">Перевести</button>
+    </form>
+
+    <div class="results" id="results"></div>
+</div>
+</body>
+</html>
