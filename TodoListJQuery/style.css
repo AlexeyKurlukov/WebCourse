@@ -35,10 +35,16 @@
 
 .todo-page .delete-button {
     margin-right: 122px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .todo-page .edit-button {
     margin-left: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .todo-page .cancel-button {
@@ -49,17 +55,7 @@
     margin-left: 5px;
 }
 
-.todo-page .todo-item + .todo-item {
-    margin-top: 10px;
-}
-
 .todo-page .todo-item {
+    margin-top: 10px;
     position: relative;
-}
-
-.todo-page .todo-item .delete-button,
-.todo-page .todo-item .edit-button {
-    position: absolute;
-    top: 0;
-    right: 0;
 }
