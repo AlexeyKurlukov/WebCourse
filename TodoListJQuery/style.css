@@ -1,8 +1,11 @@
 .todo-page .add-todo-form > * {
     display: inline-block;
     vertical-align: top;
-    padding-left: 0;
-    max-width: 70%;
+}
+
+.todo-page .todo-item {
+    max-width: 80%;
+    word-wrap: break-word;
 }
 
 .todo-page .error-message {
@@ -26,35 +29,37 @@
     padding-left: 0;
 }
 
-.add-button {
+.todo-page .add-button {
     margin-left: 5px;
 }
 
 .todo-page .delete-button {
     margin-right: 122px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 .todo-page .edit-button {
-    margin-left: auto;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    margin-left: 5px;
 }
 
 .todo-page .cancel-button {
     margin-left: 5px;
-
 }
 
 .todo-page .save-button {
     margin-left: 5px;
-
 }
 
 .todo-page .todo-item + .todo-item {
     margin-top: 10px;
+}
+
+.todo-page .todo-item {
     position: relative;
+}
+
+.todo-page .todo-item .delete-button,
+.todo-page .todo-item .edit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
