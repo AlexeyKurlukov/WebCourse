@@ -1,9 +1,13 @@
-input {
-    width: 250px;
+.temperature-input {
+    width: 240px;
 }
 
 .error-message {
     color: #f00;
+}
+
+.invalid {
+    border-color: #f00;
 }
 
 .temperature-form > * {
@@ -13,4 +17,8 @@ input {
 
 .results {
     padding-top: 5px;
+}
+
+.temperature-converter {
+    padding-left: 5px;
 }

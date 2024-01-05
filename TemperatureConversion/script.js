@@ -1,23 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     const temperatureForm = document.getElementById("temperature-form");
     const results = document.getElementById("results");
-    const celsiusInput = document.getElementById("celsiusInput");
-    const errorMessage = document.querySelector(".error-message")
+    const celsiusInput = document.getElementById("celsius-input");
+    const errorMessage = document.querySelector(".error-message");
 
     function convertTemperature() {
-        const celsius = celsiusInput.value.trim();
+        const celsiusValue = celsiusInput.value.trim();
         errorMessage.style.display = "none";
+        celsiusInput.classList.remove("invalid");
 
-        if (celsius.length === 0) {
+        if (celsiusValue.length === 0) {
             errorMessage.style.display = "block";
+            celsiusInput.classList.add("invalid");
             return;
         }
 
-        const kelvin = parseFloat(celsius) + 273.15;
-        const fahrenheit = (parseFloat(celsius) * 9 / 5) + 32;
+        const kelvinValue = parseFloat(celsiusValue) + 273.15;
+        const fahrenheitValue = (parseFloat(celsiusValue) * 9 / 5) + 32;
 
-        results.innerHTML = celsius + " ° Цельсия = " + kelvin.toFixed(2) + " ° Кельвина<br>" +
-            celsius + " ° Цельсия = " + fahrenheit.toFixed(2) + " ° Фаренгейта";
+        results.innerHTML = celsiusValue + " ° Цельсия = " + kelvinValue.toFixed(2) + " ° Кельвина<br>" +
+            celsiusValue + " ° Цельсия = " + fahrenheitValue.toFixed(2) + " ° Фаренгейта";
     }
 
     temperatureForm.addEventListener("submit", function (e) {
