@@ -13,10 +13,6 @@
     display: none;
 }
 
-.todo-page .new-error-message {
-    color: #f00;
-}
-
 .todo-page .invalid {
     border-color: #f00;
 }
@@ -38,6 +34,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    width: 83px;
 }
 
 .todo-page .edit-button {
@@ -48,14 +45,25 @@
 }
 
 .todo-page .cancel-button {
-    margin-left: 5px;
+    margin-right: 122px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .todo-page .save-button {
     margin-left: 5px;
+    position: absolute;
+    width: 115px;
+    top: 0;
+    right: 0;
 }
 
 .todo-page .todo-item {
     margin-top: 10px;
     position: relative;
+}
+
+.todo-page {
+    margin-left: 5px;
 }

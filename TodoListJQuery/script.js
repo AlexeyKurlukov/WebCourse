@@ -39,21 +39,29 @@ $(function () {
                     setViewMode();
                 });
 
+                editTextField.keypress(function (e) {
+                    if (e.which === 13) {
+                        newTodo.find(".save-button").click();
+                    }
+                });
+
                 newTodo.find(".save-button").click(function () {
                     const changedTodoText = editTextField.val().trim();
 
                     if (changedTodoText.length === 0) {
                         editTextField.addClass("invalid");
-                        const previousErrorMessage = editTextField.parent().find(".new-error-message");
+                        const previousErrorMessage = editTextField.parent().find(".error-message");
 
                         if (previousErrorMessage.length) {
                             previousErrorMessage.remove();
                         }
 
-                        const newErrorMessage = $("<div>").text("Необходимо указать текст").addClass("new-error-message");
-                        editTextField.parent().append(newErrorMessage);
+                        editTextField.after("<div class='error-message'>Необходимо указать текст</div>");
                         return;
                     }
+
+                    editTextField.removeClass("invalid");
+                    editTextField.parent().find(".error-message").remove();
 
                     newTodoText = changedTodoText;
                     setViewMode();
