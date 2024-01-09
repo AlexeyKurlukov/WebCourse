@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             newTodo.querySelector(".edit-button").addEventListener("click", function () {
                 newTodo.innerHTML = `<input type="text" class="edit-text-field">
-                <button class="cancel-button" type="button">Отменить</button>
-                <button class="save-button" type="button">Сохранить</button>`;
+                    <button class="cancel-button" type="button">Отменить</button>
+                    <button class="save-button" type="button">Сохранить</button>`;
 
                 const editTextField = newTodo.querySelector(".edit-text-field");
                 editTextField.value = newTodoText;
@@ -40,18 +40,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     setViewMode();
                 });
 
+                editTextField.addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") {
+                        newTodo.querySelector(".save-button").click();
+                    }
+                });
+
                 newTodo.querySelector(".save-button").addEventListener("click", function () {
                     const changedTodoText = editTextField.value.trim();
+                    const previousErrorMessage = editTextField.parentNode.querySelector(".new-error-message");
 
                     if (changedTodoText.length === 0) {
                         editTextField.classList.add("invalid");
-                        const previousErrorMessage = editTextField.parentNode.querySelector(".new-error-message");
 
                         if (previousErrorMessage) {
-                            previousErrorMessage.remove();
+                            previousErrorMessage.style.display = "block";
+                            return;
                         }
 
-                        const newErrorMessage = document.createElement('div');
+                        const newErrorMessage = document.createElement("div");
                         newErrorMessage.innerText = "Необходимо указать текст";
                         newErrorMessage.classList.add("new-error-message");
                         editTextField.parentNode.appendChild(newErrorMessage);

@@ -1,49 +1,73 @@
-.add-todo-page .add-todo-form > * {
+.todo-page .add-todo-form > * {
     display: inline-block;
     vertical-align: top;
 }
 
-.add-todo-page .error-message {
+.todo-page .todo-item {
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.todo-page .error-message {
     color: #f00;
     display: none;
 }
 
-.add-todo-page .new-error-message {
+.todo-page .new-error-message {
     color: #f00;
 }
 
-.add-todo-page .invalid {
+.todo-page .invalid {
     border-color: #f00;
 }
 
-.add-todo-page .invalid + .error-message {
+.todo-page .invalid + .error-message {
     display: block;
 }
 
-.add-todo-page .todo-list {
+.todo-page .todo-list {
     padding-left: 0;
 }
 
-.add-todo-page .add-button {
+.todo-page .add-button {
     margin-left: 5px;
 }
 
-.add-todo-page .delete-button {
-    margin-left: 5px;
+.todo-page .delete-button {
+    margin-right: 122px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 83px;
 }
 
-.add-todo-page .edit-button {
+.todo-page .edit-button {
     margin-left: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.add-todo-page .cancel-button {
-    margin-left: 5px;
+.todo-page .cancel-button {
+    margin-right: 122px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.add-todo-page .save-button {
+.todo-page .save-button {
     margin-left: 5px;
+    position: absolute;
+    width: 115px;
+    top: 0;
+    right: 0;
 }
 
-.add-todo-page .todo-item + .todo-item {
+.todo-page .todo-item {
     margin-top: 10px;
+    position: relative;
+}
+
+.todo-page {
+    margin-left: 5px;
 }
