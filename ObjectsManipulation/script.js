@@ -5,13 +5,13 @@
     }
 
     function getPopulationsByCountries(countries) {
-        const populationByCountry = {};
+        const populationsByCountries = {};
 
         countries.forEach(country => {
-            populationByCountry[country.name] = country.cities.reduce((totalPopulation, city) => totalPopulation + city.population, 0);
+            populationsByCountries[country.name] = country.cities.reduce((totalPopulation, city) => totalPopulation + city.population, 0);
         });
 
-        return populationByCountry;
+        return populationsByCountries;
     }
 
     const countries = [
