@@ -1,0 +1,38 @@
+.dark-background {
+    background-color: #000;
+}
+
+.box {
+    background-color: rgb(254, 238, 213);
+    max-width: 748px;
+    margin-top: 145px;
+    margin-left: 450px;
+    padding: 1px 15px;
+}
+
+.main-heading {
+    color: rgb(113, 100, 83);
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 1;
+}
+
+.text {
+    text-indent: 14px;
+    text-align: justify;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: rgb(113, 100, 83);
+}
+
+.highlighted,
+.course-content {
+    font-size: 18px;
+    color: #628f95;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+.line-trough {
+    text-decoration: line-through;
+}
