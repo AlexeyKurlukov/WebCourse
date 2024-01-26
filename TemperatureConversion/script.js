@@ -5,21 +5,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorMessage = document.querySelector(".error-message");
 
     function convertTemperature() {
-        const celsiusValue = celsiusInput.value.trim();
+        const celsiusString = celsiusInput.value.trim();
         errorMessage.style.display = "none";
         celsiusInput.classList.remove("invalid");
 
-        if (celsiusValue.length === 0) {
+        if (celsiusString.length === 0) {
             errorMessage.style.display = "block";
             celsiusInput.classList.add("invalid");
             return;
         }
 
-        const kelvinValue = parseFloat(celsiusValue) + 273.15;
-        const fahrenheitValue = (parseFloat(celsiusValue) * 9 / 5) + 32;
+        const celsiusValue = parseFloat(celsiusString);
+        const kelvinValue = celsiusValue + 273.15;
+        const fahrenheitValue = (celsiusValue * 9 / 5) + 32;
 
-        results.innerHTML = celsiusValue + " ° Цельсия = " + kelvinValue.toFixed(2) + " ° Кельвина<br>" +
-            celsiusValue + " ° Цельсия = " + fahrenheitValue.toFixed(2) + " ° Фаренгейта";
+        results.innerHTML = celsiusString + " ° Цельсия = " + kelvinValue.toFixed(2) + " ° Кельвина<br>" +
+            celsiusString + " ° Цельсия = " + fahrenheitValue.toFixed(2) + " ° Фаренгейта";
     }
 
     temperatureForm.addEventListener("submit", function (e) {
